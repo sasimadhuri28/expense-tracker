@@ -24,5 +24,22 @@ A RESTful backend API to track personal expenses built with Java and Spring Boot
 | DELETE | /api/expenses/{id} | Delete an expense |
 
 ## Sample Request
-POST /api/expenses
+**POST /api/expenses**
 ```json
+{
+  "amount": 450.00,
+  "category": "Food",
+  "date": "2026-06-04",
+  "description": "Lunch with friends"
+}
+```
+
+## Sample Summary Response
+**GET /api/expenses/summary**
+```json
+{
+  "Food": 1250.0,
+  "Travel": 1200.0,
+  "Entertainment": 500.0
+}
+```
